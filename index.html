@@ -1,0 +1,700 @@
+<!-- =========================
+  FILE: index.html
+  INSTRUCTIONS:
+  1) Create 3 files in the same folder: index.html, style.css, script.js
+  2) Paste the matching code into each file.
+  3) Open index.html in a browser. No build tools needed.
+========================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f19" />
+  <meta name="description" content="Premium modern portfolio — HTML, CSS, Vanilla JS." />
+  <title>Azizbek — Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background accents -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Go to Home">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="logo-text">Azizbek</span>
+      </a>
+
+      <button class="icon-btn nav-toggle" id="navToggle"
+        aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link" href="#home" data-scroll>Home</a></li>
+          <li><a class="nav-link" href="#about" data-scroll>About</a></li>
+          <li><a class="nav-link" href="#skills" data-scroll>Skills</a></li>
+          <li><a class="nav-link" href="#projects" data-scroll>Projects</a></li>
+          <li><a class="nav-link" href="#services" data-scroll>Services</a></li>
+          <li><a class="nav-link" href="#testimonials" data-scroll>Testimonials</a></li>
+          <li><a class="nav-link" href="#blog" data-scroll>Blog</a></li>
+          <li><a class="nav-link" href="#contact" data-scroll>Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 13a8 8 0 1 1-10-10a7 7 0 0 0 10 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <a class="btn btn-primary" href="#contact" data-scroll>
+            Hire Me
+            <span class="btn-glow" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
+          <div class="pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            Available for freelance • Frontend & UI
+          </div>
+
+          <h1 class="hero-title">
+            I build <span class="text-gradient">modern web experiences</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Premium, fast, accessible interfaces — crafted with clean code and thoughtful UX.
+            I turn ideas into polished products.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects" data-scroll>
+              View Projects
+              <span class="btn-glow" aria-hidden="true"></span>
+            </a>
+            <a class="btn btn-ghost" href="#" id="downloadCvBtn">
+              Download CV
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-num" data-count="35">0</div>
+              <div class="metric-label">Projects shipped</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num" data-count="3">0</div>
+              <div class="metric-label">Years experience</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num" data-count="18">0</div>
+              <div class="metric-label">Happy clients</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="profile-card glass">
+            <div class="profile-media">
+              <!-- Image placeholder (pure CSS gradient) -->
+              <div class="profile-img" role="img" aria-label="Profile image placeholder"></div>
+              <div class="status-badge">
+                <span class="status-dot" aria-hidden="true"></span>
+                Building premium UI
+              </div>
+            </div>
+
+            <div class="profile-body">
+              <div class="profile-name">
+                <h2>Asadillo</h2>
+                <p>Frontend Developer • UI/UX</p>
+              </div>
+
+              <div class="profile-stats">
+                <div class="stat">
+                  <span class="stat-num">35+</span>
+                  <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">3y</span>
+                  <span class="stat-label">Experience</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">18</span>
+                  <span class="stat-label">Clients</span>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <a class="btn btn-soft" href="#contact" data-scroll>Let’s work</a>
+                <a class="btn btn-soft" href="#projects" data-scroll>See work</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-mini-panels">
+            <div class="mini-panel glass">
+              <div class="mini-title">Focus</div>
+              <div class="mini-body">UI Systems • Performance • Accessibility</div>
+            </div>
+            <div class="mini-panel glass">
+              <div class="mini-title">Stack</div>
+              <div class="mini-body">HTML • CSS • JS • Figma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">A calm, structured approach — with bold attention to detail.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <div class="about-img glass" role="img" aria-label="About image placeholder">
+              <div class="about-img-inner"></div>
+            </div>
+            <div class="about-badges">
+              <div class="badge glass">
+                <span class="badge-kicker">Based in</span>
+                <span class="badge-value">Uzbekistan</span>
+              </div>
+              <div class="badge glass">
+                <span class="badge-kicker">Role</span>
+                <span class="badge-value">Frontend + UI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <h3 class="about-title">I design and build clean, premium interfaces that users love.</h3>
+            <p class="about-text">
+              I combine modern UI/UX thinking with frontend engineering to ship fast, responsive,
+              and accessible experiences. I’m obsessed with whitespace, typography, and smooth micro-interactions —
+              but only when they add clarity.
+            </p>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <div class="timeline-top">
+                    <span class="timeline-title">Frontend Developer</span>
+                    <span class="timeline-meta">2024 — Present</span>
+                  </div>
+                  <p class="timeline-text">Building landing pages, web apps, and UI systems with performance-first mindset.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <div class="timeline-top">
+                    <span class="timeline-title">UI/UX Practice</span>
+                    <span class="timeline-meta">2023 — 2024</span>
+                  </div>
+                  <p class="timeline-text">Designing components, grids, and prototypes in Figma; refining visual taste.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <div class="timeline-top">
+                    <span class="timeline-title">Learning & Growth</span>
+                    <span class="timeline-meta">Always</span>
+                  </div>
+                  <p class="timeline-text">Deepening JavaScript, accessibility, and real-world product design patterns.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="values">
+              <h4 class="values-title">What I value</h4>
+              <div class="values-grid">
+                <article class="value-card glass">
+                  <div class="value-icon" aria-hidden="true">⚡</div>
+                  <h5>Performance</h5>
+                  <p>Fast load, smooth runtime, and lightweight UI decisions.</p>
+                </article>
+                <article class="value-card glass">
+                  <div class="value-icon" aria-hidden="true">🧩</div>
+                  <h5>Clarity</h5>
+                  <p>Readable layouts, strong hierarchy, and simple user flows.</p>
+                </article>
+                <article class="value-card glass">
+                  <div class="value-icon" aria-hidden="true">🔒</div>
+                  <h5>Accessibility</h5>
+                  <p>Keyboard-friendly and inclusive UI by default.</p>
+                </article>
+                <article class="value-card glass">
+                  <div class="value-icon" aria-hidden="true">🎯</div>
+                  <h5>Craft</h5>
+                  <p>Consistent spacing, typography, and micro-interactions.</p>
+                </article>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">A focused set — refined through shipping.</p>
+        </div>
+
+        <div class="skills-wrap reveal">
+          <div class="tabs" role="tablist" aria-label="Skill categories">
+            <button class="tab is-active" role="tab" aria-selected="true" data-skill-tab="frontend">Frontend</button>
+            <button class="tab" role="tab" aria-selected="false" data-skill-tab="tools">Tools</button>
+            <button class="tab" role="tab" aria-selected="false" data-skill-tab="soft">Soft Skills</button>
+          </div>
+
+          <div class="skills-grid" id="skillsGrid" aria-live="polite">
+            <!-- JS renders skill indicators here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">A curated selection — premium UI, clean code, real outcomes.</p>
+        </div>
+
+        <div class="filters reveal" id="projectFilters" aria-label="Project filters">
+          <!-- JS renders filter buttons -->
+        </div>
+
+        <div class="projects-grid reveal" id="projectsGrid" aria-live="polite">
+          <!-- JS renders project cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">Simple options, premium delivery.</p>
+        </div>
+
+        <div class="services-grid reveal">
+          <article class="service-card glass">
+            <div class="service-top">
+              <div class="service-icon" aria-hidden="true">🧱</div>
+              <h3>Landing Page</h3>
+            </div>
+            <p>High-converting, fast, responsive landing pages with premium design details.</p>
+            <ul class="bullets">
+              <li>Hero + sections</li>
+              <li>Speed + SEO basics</li>
+              <li>Mobile-first</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass">
+            <div class="service-top">
+              <div class="service-icon" aria-hidden="true">⚙️</div>
+              <h3>Frontend Development</h3>
+            </div>
+            <p>Clean, scalable UI implementation with accessible components and smooth UX.</p>
+            <ul class="bullets">
+              <li>Design-to-code</li>
+              <li>Reusable components</li>
+              <li>Vanilla JS interactions</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass">
+            <div class="service-top">
+              <div class="service-icon" aria-hidden="true">🎨</div>
+              <h3>UI Design</h3>
+            </div>
+            <p>Modern visual systems: typography, spacing, components, and consistent layout rules.</p>
+            <ul class="bullets">
+              <li>Wireframes</li>
+              <li>High-fidelity UI</li>
+              <li>Design system</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass">
+            <div class="service-top">
+              <div class="service-icon" aria-hidden="true">🚀</div>
+              <h3>Optimization</h3>
+            </div>
+            <p>Performance audits and UI refinements to make your site feel instant and premium.</p>
+            <ul class="bullets">
+              <li>Lighthouse improvements</li>
+              <li>Asset optimization</li>
+              <li>UX polishing</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pricing reveal" aria-label="Pricing plans">
+          <div class="pricing-head">
+            <h3 class="pricing-title">Pricing</h3>
+            <p class="pricing-subtitle">Pick a plan — scale as you grow.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card glass">
+              <div class="price-top">
+                <span class="price-name">Starter</span>
+                <span class="price-amount">$199</span>
+              </div>
+              <p class="price-desc">Perfect for personal pages and simple landing sites.</p>
+              <ul class="bullets">
+                <li>1 page layout</li>
+                <li>Basic animations</li>
+                <li>Delivery in 3–5 days</li>
+              </ul>
+              <button class="btn btn-soft w-full" data-plan="Starter">Select plan</button>
+            </article>
+
+            <article class="price-card glass is-featured">
+              <div class="price-badge">Most Popular</div>
+              <div class="price-top">
+                <span class="price-name">Pro</span>
+                <span class="price-amount">$499</span>
+              </div>
+              <p class="price-desc">Best for portfolios, startups, and premium marketing sites.</p>
+              <ul class="bullets">
+                <li>Up to 5 sections</li>
+                <li>Advanced interactions</li>
+                <li>Delivery in 5–8 days</li>
+              </ul>
+              <button class="btn btn-primary w-full" data-plan="Pro">
+                Select plan
+                <span class="btn-glow" aria-hidden="true"></span>
+              </button>
+            </article>
+
+            <article class="price-card glass">
+              <div class="price-top">
+                <span class="price-name">Business</span>
+                <span class="price-amount">$999</span>
+              </div>
+              <p class="price-desc">For web apps and custom UI systems with multiple pages.</p>
+              <ul class="bullets">
+                <li>Multi-page setup</li>
+                <li>UI system</li>
+                <li>Delivery in 2–3 weeks</li>
+              </ul>
+              <button class="btn btn-soft w-full" data-plan="Business">Select plan</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Testimonials</h2>
+          <p class="section-subtitle">What clients say when the UI feels “expensive”.</p>
+        </div>
+
+        <div class="testimonial-shell reveal">
+          <div class="testimonial-controls">
+            <button class="icon-btn" id="tPrev" aria-label="Previous testimonial">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="icon-btn" id="tNext" aria-label="Next testimonial">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="testimonial-track" id="testimonialTrack" aria-live="polite">
+            <!-- JS renders slides -->
+          </div>
+
+          <div class="dots" id="testimonialDots" aria-label="Testimonial dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Blog</h2>
+          <p class="section-subtitle">Notes on UI craft, frontend, and building systems.</p>
+        </div>
+
+        <div class="blog-grid reveal" id="blogGrid" aria-live="polite">
+          <!-- JS renders blog cards -->
+        </div>
+
+        <div class="section-foot reveal">
+          <button class="btn btn-soft" id="viewAllBlogBtn">View all</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Tell me about your project — I’ll reply with a clear plan.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-cards reveal">
+            <article class="info-card glass">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div>
+                <h3>Location</h3>
+                <p>Farg'ona, Uzbekistan</p>
+              </div>
+            </article>
+            <article class="info-card glass">
+              <div class="info-icon" aria-hidden="true">✉️</div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:c48943083@gmail.com">c48943083@gmail.com</a></p>
+              </div>
+            </article>
+            <article class="info-card glass">
+              <div class="info-icon" aria-hidden="true">💬</div>
+              <div>
+                <h3>Telegram</h3>
+                <p><a href="https://web.telegram.org/" id="telegramLink">@moydinov_11</a></p>
+              </div>
+            </article>
+          </div>
+
+          <form class="contact-form glass reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+              <small class="error" data-error-for="name"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+              <small class="error" data-error-for="email"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me what you want to build..."></textarea>
+              <small class="error" data-error-for="message"></small>
+            </div>
+
+            <button class="btn btn-primary w-full" type="submit">
+              Send message
+              <span class="btn-glow" aria-hidden="true"></span>
+            </button>
+
+            <p class="form-hint">By sending, you agree to be contacted back. No spam.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#home" data-scroll>
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="logo-text">Asadillo</span>
+        </a>
+        <p class="footer-text">
+          Premium frontend & UI/UX. Clean systems. Smooth experiences.
+        </p>
+
+        <div class="socials" aria-label="Social links">
+          <a class="social" href="#" aria-label="GitHub">
+            <!-- simple inline SVG icon -->
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.5c0-1 .1-1.4-.5-2 2 0 4-.5 4-4a3.5 3.5 0 0 0-1-2.5a3.2 3.2 0 0 0-.1-2.5s-.8-.2-2.5 1a8.6 8.6 0 0 0-4.8 0c-1.7-1.2-2.5-1-2.5-1a3.2 3.2 0 0 0-.1 2.5A3.5 3.5 0 0 0 6 11c0 3.5 2 4 4 4-.3.4-.5.8-.5 1.5V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="social" href="#" aria-label="LinkedIn">
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 9h4v12H2Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 4a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </a>
+          <a class="social" href="#" aria-label="Telegram">
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 5 2 12l7 2 2 7 4-5 6-11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 14l12-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#skills" data-scroll>Skills</a></li>
+          <li><a href="#projects" data-scroll>Projects</a></li>
+          <li><a href="#services" data-scroll>Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>More</h4>
+        <ul>
+          <li><a href="#testimonials" data-scroll>Testimonials</a></li>
+          <li><a href="#blog" data-scroll>Blog</a></li>
+          <li><a href="#contact" data-scroll>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-note">
+        <h4>Let’s build</h4>
+        <p>Want a premium landing page or web app UI? Send a message and I’ll respond with a clear plan.</p>
+        <a class="btn btn-soft" href="#contact" data-scroll>Start a project</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Asadillo. All rights reserved.</p>
+      <a href="#top" data-scroll class="footer-toplink">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5m0 0 6 6m-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast-inner">
+      <div class="toast-icon" id="toastIcon" aria-hidden="true">✅</div>
+      <div class="toast-text">
+        <div class="toast-title" id="toastTitle">Success</div>
+        <div class="toast-msg" id="toastMsg">Your message has been sent.</div>
+      </div>
+      <button class="icon-btn toast-close" id="toastClose" aria-label="Close notification">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-panel glass" role="document">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="modalTitle">Project title</h3>
+          <p class="modal-subtitle" id="modalSubtitle">Short subtitle</p>
+        </div>
+        <button class="icon-btn" id="modalClose" aria-label="Close modal">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-carousel">
+          <button class="icon-btn car-btn" id="carPrev" aria-label="Previous image">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="car-viewport">
+            <div class="car-track" id="carTrack">
+              <!-- JS renders placeholder slides -->
+            </div>
+          </div>
+
+          <button class="icon-btn car-btn" id="carNext" aria-label="Next image">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-meta">
+          <div class="tag-row" id="modalTags"></div>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <div class="modal-features">
+            <h4>Key features</h4>
+            <ul class="feature-list" id="modalFeatures"></ul>
+          </div>
+
+          <div class="modal-actions">
+            <a class="btn btn-primary" id="modalLive" href="#" target="_blank" rel="noreferrer">
+              Live Demo
+              <span class="btn-glow" aria-hidden="true"></span>
+            </a>
+            <a class="btn btn-soft" id="modalGit" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
